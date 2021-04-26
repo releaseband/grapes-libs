@@ -11,11 +11,9 @@ type WeightGetter interface {
 }
 
 
-// [min,max]
-type rng func(min uint32, max uint32) uint32
 
 type GroupedWeights interface {
-	Value(groupName string, rng rng) (uint16, error)
+	Value(groupName string, rng func(uint32, uint32) uint32) (uint16, error)
 }
 
 type GroupedWeightsGetter interface {
