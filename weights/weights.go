@@ -9,3 +9,11 @@ type Weights interface {
 type WeightGetter interface {
 	Get(belongs, weightName string, groupKey uint16) Weights
 }
+
+type GroupedWeights interface {
+	Value(groupName string, rng func(uint32, uint32) uint32) (uint16, error)
+}
+
+type GroupedWeightsGetter interface {
+	Get(belongs, weightName string, groupKey uint16) GroupedWeights
+}
