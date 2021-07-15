@@ -4,23 +4,17 @@ type RNG interface {
 	Random(min,max uint32) uint32
 }
 
-type Type interface {
-	Type() uint16
-}
-
 type ReelsGenerator interface {
-	Type
 	Generate(rng RNG) ([][]uint32, error)
 }
 
 type BuyFeatureReelsGenerator interface {
-	Type
 	Generate(rng RNG, bfType uint16) ([][]uint32, error)
 }
 
 //deprecated
 type Generator interface {
-	Type
+	Type() uint16
 	Generate(ids []int) [][]uint32
 }
 
