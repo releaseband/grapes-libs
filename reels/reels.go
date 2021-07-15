@@ -1,6 +1,6 @@
 package reels
 
-import "github.com/releaseband/grapes-libs/base"
+import "github.com/releaseband/grapes-libs/args"
 
 type ReelsGenerator interface {
 	Generate(rng args.RNG) ([][]uint32, error)
