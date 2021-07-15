@@ -1,5 +1,13 @@
 package reels
 
+type RNG interface {
+	Random(min,max uint32) uint32
+}
+
+type ReelsGenerator interface {
+	Generate(rng RNG) ([][]uint32, error)
+}
+
 type Generator interface {
 	Generate(ids []int) [][]uint32
 	Type() uint16
