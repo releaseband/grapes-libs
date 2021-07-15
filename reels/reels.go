@@ -1,15 +1,13 @@
 package reels
 
-type RNG interface {
-	Random(min,max uint32) uint32
-}
+import "github.com/releaseband/grapes-libs/base"
 
 type ReelsGenerator interface {
-	Generate(rng RNG) ([][]uint32, error)
+	Generate(rng base.RNG) ([][]uint32, error)
 }
 
 type BuyFeatureReelsGenerator interface {
-	Generate(rng RNG, bfType uint32) ([][]uint32, error)
+	Generate(rng base.RNG, bfType uint32) ([][]uint32, error)
 }
 
 //deprecated

@@ -6,6 +6,7 @@ type Weights interface {
 	Max() uint32
 }
 
+//deprecated
 type WeightGetter interface {
 	Get(belongs, weightName string, groupKey uint16) Weights
 }
