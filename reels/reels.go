@@ -9,7 +9,7 @@ type ReelsGenerator interface {
 }
 
 type BuyFeatureReelsGenerator interface {
-	Generate(rng RNG, bfType uint16) ([][]uint32, error)
+	Generate(rng RNG, bfType uint32) ([][]uint32, error)
 }
 
 //deprecated
