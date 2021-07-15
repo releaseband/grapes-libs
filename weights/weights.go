@@ -1,5 +1,8 @@
 package weights
 
+import "github.com/releaseband/grapes-libs/rng"
+
+//deprecated
 type Weights interface {
 	Value(i uint32) (uint16, bool)
 	Gap(value uint16) (uint32, uint32, bool)
@@ -17,4 +20,8 @@ type GroupedWeights interface {
 
 type GroupedWeightsGetter interface {
 	Get(belongs, weightName string, groupKey uint16) GroupedWeights
+}
+
+type SimpleWeights interface {
+	Value(rng rng.RNG) (uint16, error)
 }
