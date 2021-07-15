@@ -15,7 +15,7 @@ type ReelsGenerator interface {
 
 type BuyFeatureReelsGenerator interface {
 	Type
-	Generator(rng RNG, bfType uint16) ([][]uint32, error)
+	Generate(rng RNG, bfType uint16) ([][]uint32, error)
 }
 
 //deprecated
