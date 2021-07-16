@@ -10,7 +10,7 @@ type Math interface {
 	EXP() float64
 	BuyFeatureReelsGroup() reels.BuyFeatureReelsGroup
 	SimpleReelsGroup() reels.SimpleReelsGroup
-	Weights() []weights.SimpleWeights
+	Weights() []weights.ValidSimpleWeights
 }
 
 type Store interface {
