@@ -25,8 +25,3 @@ type GroupedWeightsGetter interface {
 type SimpleWeights interface {
 	Value(rng rng.RNG) (uint16, error)
 }
-
-type ValidSimpleWeights interface {
-	SimpleWeights
-	Validate() error
-}
