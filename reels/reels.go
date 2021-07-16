@@ -3,11 +3,11 @@ package reels
 import "github.com/releaseband/grapes-libs/rng"
 
 type ReelsGenerator interface {
-	GenerateSymbols(rng rng.RNG) ([][]uint32, error)
+	Generate(rng rng.RNG) ([][]uint32, error)
 }
 
 type BuyFeatureReelsGenerator interface {
-	GenerateSymbols(rng rng.RNG, bfType uint32) ([][]uint32, error)
+	Generate(rng rng.RNG, bfType uint32) ([][]uint32, error)
 }
 
 //deprecated
