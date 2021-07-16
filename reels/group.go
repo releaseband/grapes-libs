@@ -1,7 +1,7 @@
 package reels
 
 type BuyFeatureReelsGroup interface {
-	BuyFeatureReels() BuyFeatureReelsGenerator
+	BuyFeatureReels(bfType uint8) ReelsGenerator
 	BonusReels() ReelsGenerator
 }
 
