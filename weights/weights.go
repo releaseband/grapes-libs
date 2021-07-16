@@ -23,5 +23,6 @@ type GroupedWeightsGetter interface {
 }
 
 type SimpleWeights interface {
+	Name() string
 	Value(rng rng.RNG) (uint16, error)
 }
