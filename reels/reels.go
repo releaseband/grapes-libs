@@ -6,6 +6,10 @@ type ReelsGenerator interface {
 	Generate(rng rng.RNG) ([][]uint32, error)
 }
 
+type BuyFeatureReelsGenerator interface {
+	Generate(rng rng.RNG, bfType uint32) ([][]uint32, error)
+}
+
 //deprecated
 type Generator interface {
 	Type() uint16
