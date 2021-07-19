@@ -1,11 +1,11 @@
 package reels
 
 type BuyFeatureReelsGroup interface {
-	BuyFeatureReels() BuyFeatureReelsGenerator
-	BonusReels() ReelsGenerator
+	BuyFeatureReels() (BuyFeatureReelsGenerator, error)
+	BonusReels() (ReelsGenerator, error)
 }
 
 type SimpleReelsGroup interface {
-	BaseReels() ReelsGenerator
-	BonusReels() ReelsGenerator
+	BaseReels() (ReelsGenerator, error)
+	BonusReels() (ReelsGenerator, error)
 }

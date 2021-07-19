@@ -8,7 +8,7 @@ import (
 type Math interface {
 	RTP() uint8
 	EXP() float64
-	BuyFeatureReelsGroup() reels.BuyFeatureReelsGroup
+	BuyFeatureReelsGroup() (reels.BuyFeatureReelsGroup, error)
 	SimpleReelsGroup() reels.SimpleReelsGroup
 	Weights() []weights.SimpleWeights
 }
