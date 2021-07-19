@@ -9,7 +9,7 @@ type Math interface {
 	RTP() uint8
 	EXP() float64
 	BuyFeatureReelsGroup() (reels.BuyFeatureReelsGroup, error)
-	SimpleReelsGroup() reels.SimpleReelsGroup
+	SimpleReelsGroup() (reels.SimpleReelsGroup, error)
 	Weights() []weights.SimpleWeights
 }
 
