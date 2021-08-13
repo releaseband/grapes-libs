@@ -10,6 +10,7 @@ type Math interface {
 	EXP() float64
 	BuyFeatureReelsGroup() (reels.BuyFeatureReelsGroup, error)
 	SimpleReelsGroup() (reels.SimpleReelsGroup, error)
+	ExtendedReelsGroup() (reels.ExtendedReelsGroup, error)
 	Weights() []weights.SimpleWeights
 }
 

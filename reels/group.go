@@ -9,3 +9,8 @@ type SimpleReelsGroup interface {
 	BaseReels() (ReelsGenerator, error)
 	BonusReels() (ReelsGenerator, error)
 }
+
+type ExtendedReelsGroup interface {
+	BaseReels() (ExtendedReels, error)
+	BonusReels() (ExtendedReels, error)
+}
