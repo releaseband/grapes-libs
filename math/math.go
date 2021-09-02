@@ -5,13 +5,22 @@ import (
 	"github.com/releaseband/grapes-libs/weights"
 )
 
-type Math interface {
-	RTP() uint8
-	EXP() float64
+type Reels interface {
 	BuyFeatureReelsGroup() (reels.BuyFeatureReelsGroup, error)
 	SimpleReelsGroup() (reels.SimpleReelsGroup, error)
 	ExtendedReelsGroup() (reels.ExtendedReelsGroup, error)
+}
+
+type Weights interface {
 	Weights() []weights.SimpleWeights
+	ExtendedWeights() []weights.ExtendedWeights
+}
+
+type Math interface {
+	Reels
+	Weights
+	RTP() uint8
+	EXP() float64
 }
 
 type Store interface {
