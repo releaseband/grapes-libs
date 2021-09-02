@@ -26,3 +26,8 @@ type SimpleWeights interface {
 	Name() string
 	Value(rng rng.RNG) (uint16, error)
 }
+
+type ExtendedWeights interface {
+	Name() string
+	Value(rng rng.RNG, option uint32) (uint16, error)
+}
