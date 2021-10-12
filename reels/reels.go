@@ -11,7 +11,7 @@ type ExtendedReels interface {
 }
 
 type BuyFeatureReelsGenerator interface {
-	Generate(rng rng.RNG, bfType uint32) ([][]uint32, error)
+	Generate(rng rng.RNG, bfType uint32, count uint16) ([][]uint32, error)
 }
 
 //deprecated
