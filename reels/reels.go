@@ -1,17 +1,17 @@
 package reels
 
-import "github.com/releaseband/grapes-libs/rng"
+import "github.com/releaseband/rng-plugin-adapter/adapter"
 
 type ReelsGenerator interface {
-	Generate(rng rng.RNG) ([][]uint32, error)
+	Generate(rng adapter.RNG) ([][]uint32, error)
 }
 
 type ExtendedReels interface {
-	Generate(rng rng.RNG, option uint32) ([][]uint32, error)
+	Generate(rng adapter.RNG, option uint32) ([][]uint32, error)
 }
 
 type BuyFeatureReelsGenerator interface {
-	Generate(rng rng.RNG, bfType uint32, count uint16) ([][]uint32, error)
+	Generate(rng adapter.RNG, bfType uint32, count uint16) ([][]uint32, error)
 }
 
 //deprecated
