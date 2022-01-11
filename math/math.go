@@ -9,6 +9,7 @@ type Reels interface {
 	BuyFeatureReelsGroup() (reels.BuyFeatureReelsGroup, error)
 	SimpleReelsGroup() (reels.SimpleReelsGroup, error)
 	ExtendedReelsGroup() (reels.ExtendedReelsGroup, error)
+	BfReSpinReels() (reels.BuyFeatureReelsGenerator, error)
 }
 
 type Weights interface {
