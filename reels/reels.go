@@ -1,32 +1,32 @@
 package reels
 
-import "github.com/releaseband/rng-plugin-adapter/adapter"
+import "github.com/releaseband/rng/v4"
 
 type ReelsGenerator interface {
-	Generate(rng adapter.RNG) ([][]uint32, error)
+	Generate(rng rng.RNG) ([][]uint32, error)
 }
 
 type ExtendedReels interface {
-	Generate(rng adapter.RNG, option uint32) ([][]uint32, error)
+	Generate(rng rng.RNG, option uint32) ([][]uint32, error)
 }
 
 type BuyFeatureReelsGenerator interface {
-	Generate(rng adapter.RNG, bfType uint32, count uint16) ([][]uint32, error)
+	Generate(rng rng.RNG, bfType uint32, count uint16) ([][]uint32, error)
 }
 
-//deprecated
+// deprecated
 type Generator interface {
 	Type() uint16
 	Generate(ids []int) [][]uint32
 }
 
-//deprecated
+// deprecated
 type Group interface {
 	Exp() float64
 	Generators() []Generator
 }
 
-//deprecated
+// deprecated
 type Getter interface {
 	Get(name string, key uint8) Group
 }

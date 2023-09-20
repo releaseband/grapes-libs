@@ -1,8 +1,8 @@
 package math
 
 import (
-	"github.com/releaseband/grapes-libs/reels"
-	"github.com/releaseband/grapes-libs/weights"
+	"github.com/releaseband/grapes-libs/v2/reels"
+	"github.com/releaseband/grapes-libs/v2/weights"
 )
 
 type Reels interface {
