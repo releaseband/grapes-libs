@@ -1,17 +1,19 @@
 package reels
 
-import "github.com/releaseband/rng/v4"
+type RNG interface {
+	Random(min, max uint32) uint32
+}
 
 type ReelsGenerator interface {
-	Generate(rng rng.RNG) ([][]uint32, error)
+	Generate(rng RNG) ([][]uint32, error)
 }
 
 type ExtendedReels interface {
-	Generate(rng rng.RNG, option uint32) ([][]uint32, error)
+	Generate(rng RNG, option uint32) ([][]uint32, error)
 }
 
 type BuyFeatureReelsGenerator interface {
-	Generate(rng rng.RNG, bfType uint32, count uint16) ([][]uint32, error)
+	Generate(rng RNG, bfType uint32, count uint16) ([][]uint32, error)
 }
 
 // deprecated

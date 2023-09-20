@@ -1,6 +1,8 @@
 package weights
 
-import "github.com/releaseband/rng/v4"
+type RNG interface {
+	Random(min, max uint32) uint32
+}
 
 // deprecated
 type Weights interface {
@@ -24,10 +26,10 @@ type GroupedWeightsGetter interface {
 
 type SimpleWeights interface {
 	Name() string
-	Value(rng rng.RNG) (uint16, error)
+	Value(rng RNG) (uint16, error)
 }
 
 type ExtendedWeights interface {
 	Name() string
-	Value(rng rng.RNG, option uint32) (uint16, error)
+	Value(rng RNG, option uint32) (uint16, error)
 }
